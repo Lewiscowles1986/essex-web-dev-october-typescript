@@ -2,5 +2,8 @@
   "name": "essex-web-devs-typescript",
   "version": "1.0.0",
   "main": "build/index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
 }
