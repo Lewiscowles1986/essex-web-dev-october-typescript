@@ -10,7 +10,7 @@ describe('hello-world', () => {
    await request(server).get('/').expect('Hello World')
   });
 
-  it('contains a name parameter', async () => {
+  it('contains a name query parameter', async () => {
    await request(server).get('/')
     .query({name: 'Lewis'})
     .expect('Hello Lewis')
@@ -19,6 +19,18 @@ describe('hello-world', () => {
   it('rejects unknown query param', async () => {
     await request(server).get('/')
     .query({llamas: 'Lewis'})
+    .expect(400)
+  });
+
+  it('rejects invalid name query param', async () => {
+    await request(server).get('/')
+    .query({name: '   '})
+    .expect(400)
+  });
+
+  it('rejects invalid name query param', async () => {
+    await request(server).get('/')
+    .query({name: 'undefined'})
     .expect(400)
   });
 });

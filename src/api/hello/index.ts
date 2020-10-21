@@ -12,7 +12,7 @@ import {
 
 const validator = createValidator();
 const queryParams = Joi.object().keys({
-  name: Joi.string().trim().default('World')
+  name: Joi.string().trim().default('World').disallow('null', 'undefined', '')
 });
 interface HelloRequestSchema extends ValidatedRequestSchema {
     [ContainerTypes.Query]: {
