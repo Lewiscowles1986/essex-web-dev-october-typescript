@@ -1,3 +1,8 @@
-import server from './server';
+import yargs from 'yargs';
+import startServer from './commands/start-server';
 
-server.listen(5000, '127.0.0.1', 1024);
+export const app = yargs
+  .command(startServer)
+  .demandCommand()
+  .help()
+  .argv;

@@ -1,5 +1,5 @@
 import request from 'supertest';
-import server from '../server';
+import server from '../api/server';
 
 describe('hello-world', () => {
   it('has expected status code', async () => {

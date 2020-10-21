@@ -16,6 +16,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@types/yargs": "^15.0.9",
+    "express": "^4.17.1",
+    "yargs": "^16.1.0"
   }
 }
