@@ -1,0 +1,10 @@
+{
+    "mike": {
+        "skills": ["Laravel", "Vue", "PHP"],
+        "Job": "Professionally unemployed"
+    },
+    "lewis": {
+        "skills": [],
+        "Job": "Being Acerbic"
+    }
+}
