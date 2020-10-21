@@ -69,6 +69,7 @@
   "exclude": [
     "jest.config.js",
     "build",
-    "node_modules"
+    "node_modules",
+    "coverage"
   ]
 }
