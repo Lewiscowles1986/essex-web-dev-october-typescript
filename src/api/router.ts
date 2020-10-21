@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import hello from './hello';
+import leapYear from './leap-year';
 
 const r:Router = Router({
     caseSensitive: false,
@@ -8,5 +9,6 @@ const r:Router = Router({
 });
 
 r.get('/', ...hello);
+r.get('/leap-year', ...leapYear);
 
 export default r;
