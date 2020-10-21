@@ -1,4 +1,5 @@
-import { Router, Request, Response }  from 'express';
+import { Router } from 'express';
+import hello from './hello';
 
 const r:Router = Router({
     caseSensitive: false,
@@ -6,8 +7,6 @@ const r:Router = Router({
     strict: true
 });
 
-r.get('/', (req: Request, res: Response) => {
-    res.status(200).send('Hello World');
-});
+r.get('/', ...hello);
 
 export default r;
