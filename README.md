@@ -1,4 +1,24 @@
-# Readme / plan
+# Readme
+
+## Follow-up notes
+
+### TypeScript with React
+
+* https://www.digitalocean.com/community/tutorials/react-typescript-with-react
+* https://www.carlrippon.com/React-event-handlers-with-typescript/
+* https://www.sitepoint.com/react-with-typescript-best-practices/
+
+### Using TypeScript with Babel
+
+* https://kangax.github.io/compat-table/es6/
+* https://iamturns.com/typescript-babel/
+
+### Advanced types for type-guarding, using unions, etc
+
+* https://www.typescriptlang.org/docs/handbook/advanced-types.html
+
+<details>
+	<summary>Rough speaker notes</summary>
 
 * Ensure everyone has nodejs 12 (old LTS) or 14 (new LTS)
 	https://nodejs.org/en/
@@ -46,6 +66,18 @@
 	* note process exit nonsense from yargs
 * Show the type of compile time check that can be done with TypeScript
 * cover that runtime checks should be done without TypeScript
-	* Joi
-	* Joi validation middleware
+	* yarn add joi
+	* yarn add --dev @types/joi
+	* yarn add joi-validation-middleware
 	
+</details>
+
+## Missing parts of the talk
+
+* Ensuring strongly typed static data files using TypeScript & JSON
+	* For small number of records gives attribution
+	* Compile-time guarantees
+	* Memory issues when compiling (2GB+) and runtime (15MB file takes ~15MB RAM)
+* Covering Internal domain -> JS surprises
+	* Omit helper
+	* Using spread to guarantee runtime behaviour
